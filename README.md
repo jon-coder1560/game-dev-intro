@@ -1,2 +1,2 @@
 # game-dev-intro
-This project gives a small introduction to game dev
+Intro to Game Development is an educational website designed to guide beginners through the exciting process of creating video games — from initial concept to playable prototype. It explains the fundamentals of game development, introduces popular engines like Unity, Godot, and Unreal, and outlines a clear workflow for planning, prototyping, and testing games. Visitors can explore learning resources, discover tools, and pick up practical tips for starting small and finishing projects. Whether you’re an aspiring indie developer or just curious about how games are made, this site provides a simple, motivating roadmap to begin your journey in game creation.
