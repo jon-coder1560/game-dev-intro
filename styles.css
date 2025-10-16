@@ -1,0 +1,134 @@
+/* Layout & base */
+:root{
+  --max-width: 900px;
+  --accent: #2b7a78;
+  --muted: #6b7280;
+  --bg: #f7fbfb;
+  --card: #ffffff;
+  --radius: 10px;
+  --gap: 1rem;
+  --font-sans: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body {
+  font-family: var(--font-sans);
+  margin: 0;
+  background: linear-gradient(180deg,#f0fbfb,#f7f9fb);
+  color: #111827;
+  line-height: 1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+.site-header{
+  background: var(--card);
+  box-shadow: 0 6px 20px rgba(17,24,39,0.06);
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  margin: 1rem auto 1.5rem;
+  max-width: var(--max-width);
+  padding: 1.5rem;
+}
+
+.header-inner { text-align: center; }
+.site-title {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--accent);
+}
+.site-tagline {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+/* Main content container */
+.main-content{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+}
+
+/* Sections */
+.section{
+  background: var(--card);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 14px rgba(2,6,23,0.03);
+}
+
+.section-title{
+  margin-top: 0;
+  color: #0f172a;
+  font-size: 1.2rem;
+}
+
+/* Paragraphs use class .paragraph (not element selector) */
+.paragraph{
+  margin: 0.6rem 0;
+  color: #111827;
+  font-size: 1rem;
+}
+
+/* Lists */
+.bullet-list, .numbered-list, .links-list {
+  margin: 0.6rem 0 0.6rem 1.2rem;
+  padding: 0;
+}
+
+.bullet-list li, .numbered-list li, .links-list li {
+  margin: 0.4rem 0;
+}
+
+/* Images: resized with class .content-image */
+.content-image{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0.75rem 0 0;
+  border-radius: 8px;
+  object-fit: cover;
+  /* force reasonable displayed size */
+  width: 100%;
+  /* add a subtle border */
+  border: 1px solid rgba(15,23,42,0.04);
+}
+
+/* On wider screens, make images sit to the right and text wrap */
+@media (min-width: 920px){
+  .overview .content-image,
+  .tools .content-image,
+  .resources .content-image {
+    float: right;
+    width: 40%;
+    margin-left: 1rem;
+  }
+}
+
+/* Links - class selector .external-link */
+.external-link{
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Pseudo-classes: visited and hover (assignment requirement) */
+.external-link:visited {
+  color: #5a4b8a; /* a different color for visited links */
+}
+
+.external-link:hover,
+.external-link:focus {
+  text-decoration: underline;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.site-footer {
+  max-width: var(--max-width);
+  margin: 1.25rem auto;
+  text-align: center;
+  color: var(--muted);
+}
+
+.footer-text.small { font-size: 0.85rem; margin-top: 0.25rem; }
